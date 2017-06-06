@@ -3,17 +3,19 @@
 <html>
 	<head> 
 		<title> Faculty Calc </title>
+		<!--Påkaldelse af JS filen -->
 		<script src='calc.js'></script>
 	</head>
 		<h1> n!-fakultet </h1>
 	<body>
+		<!-- Navnet på formen, som gør det muligt at vise resultaterne af fakulteringen -->
 		<form id='form' name='index'>
 			<p> Iterativ </p>
 			<input type="text" name="num"/><br/>
+
+			<!-- Knappen der kalder udregningnsfunktionen, der også viser resultet -->
 			<button type="button" onclick="Iterative()"> Udregn</button><br/>
 			<input type="text" name="resultat1"/><br/>
-			<p> Recursiv</p>
-			<input type="text" name="resultat2"/><br/>
 		</form>
 	</body>
 </html>
