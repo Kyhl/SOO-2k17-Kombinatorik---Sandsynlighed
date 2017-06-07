@@ -31,16 +31,22 @@ function Iterative(num){
 	document.index.resultat1.value=res1;
 }
 function Recursive(num){
-  // Num defineres og parses igen
-  var num;
-  num=parseFloat(document.index.num.value);
-
-	var res2;
-  var fakultet = function(number) {
-    if (number <= 0) {
-      res2 = 1;
-    } else { // block to execute
-      res2 = (number * factorial(number - 1));
-    }
-document.index.resultat2.value=res2;  
+	// Num defineres og parses igen
+	var num;
+	num=parseFloat(document.index.num.value);
+	
+	//Function der kører sig selv indtil "if" kriterierne bliver opfyldt
+	var factorial = function(num) {
+		if (num <= 0 || num == 1) {
+			return 1;
+		} else { 
+		
+			//Ny data til brug af udregning i funktionen
+			return (num * factorial(num - 1));
+		}
+	};
+	
+	//Printer til tekstbox i HTML kode
+	document.index.resultat2.value=(factorial(num));	
 }
+
